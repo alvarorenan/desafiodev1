@@ -28,28 +28,18 @@
         <div></div>
     </header>
     <main>
+        <h1 style="text-align: center">Posts</h1>
+        <label for="titulo">Titulo</label>
+        <input class="form-control" type="text" id="titulo">
+        <label for="conteudo">Conteudo</label>
+        <textarea class="form-control" type="text" id="conteudo"></textarea>
+       <br>
+        <button class="btn btn-success" onclick="adicionar()">Adicionar</button>
 
-        <form name = "postagem" id ="postagem">
-            <div class="form-group">
-              <label for="titulo">Título da postagem</label>
-              <input type="text" class="form-control" id="titulo" placeholder="Título">
-              
-            </div>
-            <Br>
-            <div class="form-group">
-              <label for="conteudo">Conteúdo</label>
-              <textarea class="form-control" id="conteudo" placeholder="Conteúdo"></textarea>
-            </div>
-            <br>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="visivel">
-              <label class="form-check-label" for="visivel">Visível</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Postar</button>
-            <Br>
-                
-          </form>
+
+        <ul style="padding-top: 25px;" class="list-group" id="lista">
+        </ul>
 
     </main>
     <footer id="infos">
@@ -62,23 +52,14 @@
             </div>
             <div id="contato">
                 <h4>Contato</h4>
-                <p>Telefone: (84) 9 9201 9897 <a href="https://api.whatsapp.com/send?phone=5584992019897"><i class="fab fa-whatsapp"></i></a></p> 
+                <p>Telefone: (84) 9 9201 9897 <a href="https://api.whatsapp.com/send?phone=5584992019897"><i
+                            class="fab fa-whatsapp"></i></a></p>
                 <p>Email: <a href="">alvaroca1544@gmail.com</a></p>
                 <p>Instagram: <a href="https://instagram.com/alvaro.renan_">@alvaro.renan_</a></p>
             </div>
         </div>
     </footer>
 </body>
-<script>
-    document.write(document.getElementById("postagem").elements[0].value);
+<script src="js/js.js"></script>
 
-    var fm= document.forms[0];
-    var el = fm.elements;
-
-    for(var i=0; i<el.length; i++){
-        el[i].onchange = function(){
-            document.getElementById("postagem").elements[0].value = this.value;
-        }
-    }
-</script>
 </html>
