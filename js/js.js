@@ -2,7 +2,7 @@
 
 
 load();
-
+var id=0;
 function adicionar(){
     let text = document.getElementById("conteudo").value;
     let titulo = document.getElementById("titulo").value;
@@ -15,7 +15,10 @@ function adicionar(){
        
     }
     if(verif){
-        lista += "<li style='margin-bottom: 25px; border-top-width: 1px;' class='list-group-item'> <h4>" + titulo + "</h4>" + text + "</li>";
+        id++;
+        lista += "<li id='"+id+"' style='margin-bottom: 25px; border-top-width: 1px;' class='list-group-item'> <h4>" + titulo + "</h4>" + text  + "<br>"
+        + "</li>";
+        
         document.getElementById("lista").innerHTML = lista;
         localStorage.setItem("lista", document.getElementById("lista").innerHTML);
         load();
@@ -29,7 +32,6 @@ function adicionar(){
 }
 
 
-   
 
 function load(){
     document.getElementById("lista").innerHTML = localStorage.getItem("lista");
