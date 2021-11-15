@@ -29,21 +29,31 @@
     </header>
     <main>
 
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
-        <h1>POSTS</h1>
+        <form name = "postagem" id ="postagem">
+            <div class="form-group">
+              <label for="titulo">Título da postagem</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Título">
+              
+            </div>
+            <Br>
+            <div class="form-group">
+              <label for="conteudo">Conteúdo</label>
+              <textarea class="form-control" id="conteudo" placeholder="Conteúdo"></textarea>
+            </div>
+            <br>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="visivel">
+              <label class="form-check-label" for="visivel">Visível</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Postar</button>
+            <Br>
+                
+          </form>
 
     </main>
     <footer id="infos">
+        <h4 style="text-align: center; padding-top: 15px;">Desenvolvido por Álvaro Renan</h4>
         <div>
             <div id="endereco">
                 <h4>Endereço</h4>
@@ -52,11 +62,23 @@
             </div>
             <div id="contato">
                 <h4>Contato</h4>
-                <p>Telefone: (84)99999-9999</p>
-                <p>Email: <a href="">contato@lojax.com.br</a></p>
+                <p>Telefone: (84) 9 9201 9897 <a href="https://api.whatsapp.com/send?phone=5584992019897"><i class="fab fa-whatsapp"></i></a></p> 
+                <p>Email: <a href="">alvaroca1544@gmail.com</a></p>
+                <p>Instagram: <a href="https://instagram.com/alvaro.renan_">@alvaro.renan_</a></p>
             </div>
         </div>
     </footer>
 </body>
+<script>
+    document.write(document.getElementById("postagem").elements[0].value);
 
+    var fm= document.forms[0];
+    var el = fm.elements;
+
+    for(var i=0; i<el.length; i++){
+        el[i].onchange = function(){
+            document.getElementById("postagem").elements[0].value = this.value;
+        }
+    }
+</script>
 </html>
