@@ -40,6 +40,8 @@ nav a{
     display: block ;
     font-weight: bold;
     text-align: center;
+	
+
     }
 a:hover{
     background-color: #c0c0c094;
